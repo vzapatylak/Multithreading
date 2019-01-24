@@ -1,8 +1,9 @@
 package com.epam.validator;
 
-public class JSONValidator {
+public class JSONValidator implements Validator {
 
-    public boolean isJSONValid() {
+    @Override
+    public boolean isValid() {
         return false;
     }
 }

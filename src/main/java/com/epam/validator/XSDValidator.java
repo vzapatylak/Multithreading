@@ -1,8 +1,9 @@
 package com.epam.validator;
 
-public class XSDValidator {
+public class XSDValidator implements Validator {
 
-    public boolean isXSDValid() {
+    @Override
+    public boolean isValid() {
         return false;
     }
 }
