@@ -1,6 +1,6 @@
 package com.epam.service;
 
-import com.epam.entity.Automobile;
+import com.epam.entity.AutomobileEntity;
 
 public class FerryService {
 
@@ -8,17 +8,17 @@ public class FerryService {
         return false;
     }
 
-    public void addAutomobile(Automobile automobile) {
+    public void addAutomobile(AutomobileEntity automobileEntity) {
     }
 
-    public void removeAutomobile(Automobile automobile) {
+    public void removeAutomobile(AutomobileEntity automobileEntity) {
     }
 
-    private boolean isAreaAllowToAdd(Automobile automobile) {
+    private boolean isAreaAllowToAdd(AutomobileEntity automobileEntity) {
         return false;
     }
 
-    private boolean isPayloadAllowToAdd(Automobile automobile) {
+    private boolean isPayloadAllowToAdd(AutomobileEntity automobileEntity) {
         return false;
     }
 }

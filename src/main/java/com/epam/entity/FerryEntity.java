@@ -2,7 +2,7 @@ package com.epam.entity;
 
 import java.util.Objects;
 
-public class Ferry {
+public class FerryEntity {
     private int payload;
     private double areaOfPlatform;
 
@@ -22,10 +22,10 @@ public class Ferry {
         this.areaOfPlatform = areaOfPlatform;
     }
 
-    public Ferry() {
+    public FerryEntity() {
     }
 
-    public Ferry(int payload, double areaOfPlatform) {
+    public FerryEntity(int payload, double areaOfPlatform) {
         this.payload = payload;
         this.areaOfPlatform = areaOfPlatform;
     }
@@ -34,9 +34,9 @@ public class Ferry {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Ferry ferry = (Ferry) o;
-        return payload == ferry.payload &&
-                areaOfPlatform == ferry.areaOfPlatform;
+        FerryEntity ferryEntity = (FerryEntity) o;
+        return payload == ferryEntity.payload &&
+                areaOfPlatform == ferryEntity.areaOfPlatform;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class Ferry {
 
     @Override
     public String toString() {
-        return "Ferry{" +
+        return "FerryEntity{" +
                 "payload=" + payload +
                 ", areaOfPlatform=" + areaOfPlatform +
                 '}';

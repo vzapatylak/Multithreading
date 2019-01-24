@@ -2,7 +2,7 @@ package com.epam.entity;
 
 import java.util.Objects;
 
-public class Automobile {
+public class AutomobileEntity {
     private int weight;
     private double area;
     private TypeOfCar type;
@@ -31,10 +31,10 @@ public class Automobile {
         this.type = type;
     }
 
-    public Automobile() {
+    public AutomobileEntity() {
     }
 
-    public Automobile(int weight, double area, TypeOfCar type) {
+    public AutomobileEntity(int weight, double area, TypeOfCar type) {
         this.weight = weight;
         this.area = area;
         this.type = type;
@@ -44,7 +44,7 @@ public class Automobile {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Automobile that = (Automobile) o;
+        AutomobileEntity that = (AutomobileEntity) o;
         return weight == that.weight &&
                 area == that.area &&
                 type == that.type;
@@ -57,7 +57,7 @@ public class Automobile {
 
     @Override
     public String toString() {
-        return "Automobile{" +
+        return "AutomobileEntity{" +
                 "weight=" + weight +
                 ", area=" + area +
                 ", type=" + type +
