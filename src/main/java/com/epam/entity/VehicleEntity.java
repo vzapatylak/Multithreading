@@ -31,7 +31,7 @@ public class VehicleEntity {
     public void setType(TypeOfCar type) {
         this.type = type;
     }
-    
+
     public long getId() {
         return id;
     }
