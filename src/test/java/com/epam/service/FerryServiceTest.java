@@ -5,8 +5,6 @@ import com.epam.entity.TypeOfCar;
 import com.epam.entity.VehicleEntity;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 
 public class FerryServiceTest extends BaseTest {
 
