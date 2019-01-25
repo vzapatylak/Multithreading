@@ -11,7 +11,8 @@ public class FerryServiceTest extends BaseTest {
     private FerryService ferryService;
 
     public void testPayloadOverflow() {
-        ferry.setPayload(660);
+        int payload = ferry.getPayload();
+        ferry.setPayload(payload + 660);
         ferryService.addVehicle(new VehicleEntity(300, 100, TypeOfCar.CAR));
         ferryService.addVehicle(new VehicleEntity(300, 100, TypeOfCar.CAR));
         ferryService.addVehicle(new VehicleEntity(300, 100, TypeOfCar.CAR));
@@ -21,7 +22,8 @@ public class FerryServiceTest extends BaseTest {
     }
 
     public void testAreaOverflow() {
-        ferry.setAreaOfPlatform(220);
+        double area = ferry.getAreaOfPlatform();
+        ferry.setAreaOfPlatform(area + 220);
         ferryService.addVehicle(new VehicleEntity(300, 100, TypeOfCar.CAR));
         ferryService.addVehicle(new VehicleEntity(300, 100, TypeOfCar.CAR));
         ferryService.addVehicle(new VehicleEntity(300, 100, TypeOfCar.CAR));
