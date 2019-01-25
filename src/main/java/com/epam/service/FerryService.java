@@ -1,24 +1,10 @@
 package com.epam.service;
 
-import com.epam.entity.AutomobileEntity;
+import com.epam.entity.VehicleEntity;
 
-public class FerryService {
+import java.util.Set;
 
-    private boolean isFull() {
-        return false;
-    }
+public interface FerryService {
 
-    public void addAutomobile(AutomobileEntity automobileEntity) {
-    }
-
-    public void removeAutomobile(AutomobileEntity automobileEntity) {
-    }
-
-    private boolean isAreaAllowToAdd(AutomobileEntity automobileEntity) {
-        return false;
-    }
-
-    private boolean isPayloadAllowToAdd(AutomobileEntity automobileEntity) {
-        return false;
-    }
+    Set<VehicleEntity> getVehicles(Long id);
 }

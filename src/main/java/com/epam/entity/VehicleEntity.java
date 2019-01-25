@@ -2,7 +2,7 @@ package com.epam.entity;
 
 import java.util.Objects;
 
-public class AutomobileEntity {
+public class AutomobileEntity implements Runnable {
     private int weight;
     private double area;
     private TypeOfCar type;
@@ -62,5 +62,10 @@ public class AutomobileEntity {
                 ", area=" + area +
                 ", type=" + type +
                 '}';
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Вжух");
     }
 }
