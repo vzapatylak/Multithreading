@@ -1,5 +1,6 @@
 package com.epam.service;
 
+import com.epam.entity.FerryEntity;
 import com.epam.entity.VehicleEntity;
 
 import java.util.Set;
@@ -27,8 +28,8 @@ public class FerryServiceImpl implements FerryService {
     }
 
     @Override
-    public Set<VehicleEntity> getVehicles(Long id) {
-        return ferryService.getVehicles(id);
+    public Set<VehicleEntity> getVehicles(FerryEntity ferry) {
+        return ferryService.getVehicles(ferry);
     }
 
     @Override

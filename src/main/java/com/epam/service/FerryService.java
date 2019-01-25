@@ -1,12 +1,13 @@
 package com.epam.service;
 
+import com.epam.entity.FerryEntity;
 import com.epam.entity.VehicleEntity;
 
 import java.util.Set;
 
 public interface FerryService {
 
-    Set<VehicleEntity> getVehicles(Long id);
+    Set<VehicleEntity> getVehicles(FerryEntity ferry);
 
     void addVehicle(VehicleEntity vehicle);
 }
