@@ -11,4 +11,6 @@ public interface FerryDao {
     State getState(FerryEntity ferry);
 
     Set<VehicleEntity> getVehicles(FerryEntity ferry);
+
+    void addVehicle(VehicleEntity vehicle);
 }

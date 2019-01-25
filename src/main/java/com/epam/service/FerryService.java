@@ -7,4 +7,6 @@ import java.util.Set;
 public interface FerryService {
 
     Set<VehicleEntity> getVehicles(Long id);
+
+    void addVehicle(VehicleEntity vehicle);
 }

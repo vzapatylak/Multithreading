@@ -30,4 +30,9 @@ public class FerryServiceImpl implements FerryService {
     public Set<VehicleEntity> getVehicles(Long id) {
         return ferryService.getVehicles(id);
     }
+
+    @Override
+    public void addVehicle(VehicleEntity vehicle) {
+
+    }
 }

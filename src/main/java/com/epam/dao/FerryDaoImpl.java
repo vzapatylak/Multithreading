@@ -17,4 +17,9 @@ public class FerryDaoImpl implements FerryDao {
     public Set<VehicleEntity> getVehicles(FerryEntity ferry) {
         return null;
     }
+
+    @Override
+    public void addVehicle(VehicleEntity vehicle) {
+
+    }
 }
