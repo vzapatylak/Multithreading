@@ -2,7 +2,8 @@ package com.epam.entity;
 
 import java.util.Objects;
 
-public class AutomobileEntity implements Runnable {
+public class VehicleEntity {
+    private long id;
     private int weight;
     private double area;
     private TypeOfCar type;
@@ -30,11 +31,18 @@ public class AutomobileEntity implements Runnable {
     public void setType(TypeOfCar type) {
         this.type = type;
     }
-
-    public AutomobileEntity() {
+    
+    public long getId() {
+        return id;
     }
 
-    public AutomobileEntity(int weight, double area, TypeOfCar type) {
+    public void setId(long id) {
+        this.id = id;
+    }
+    public VehicleEntity() {
+    }
+
+    public VehicleEntity(int weight, double area, TypeOfCar type) {
         this.weight = weight;
         this.area = area;
         this.type = type;
@@ -44,7 +52,7 @@ public class AutomobileEntity implements Runnable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        AutomobileEntity that = (AutomobileEntity) o;
+        VehicleEntity that = (VehicleEntity) o;
         return weight == that.weight &&
                 area == that.area &&
                 type == that.type;
@@ -57,15 +65,10 @@ public class AutomobileEntity implements Runnable {
 
     @Override
     public String toString() {
-        return "AutomobileEntity{" +
+        return "VehicleEntity{" +
                 "weight=" + weight +
                 ", area=" + area +
                 ", type=" + type +
                 '}';
-    }
-
-    @Override
-    public void run() {
-        System.out.println("Вжух");
     }
 }

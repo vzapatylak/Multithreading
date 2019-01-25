@@ -1,10 +1,12 @@
 package com.epam.entity;
 
 import java.util.Objects;
+import java.util.Set;
 
 public class FerryEntity {
     private int payload;
     private double areaOfPlatform;
+    private Set<VehicleEntity> vehicles;
 
     public int getPayload() {
         return payload;
@@ -44,11 +46,23 @@ public class FerryEntity {
         return Objects.hash(payload, areaOfPlatform);
     }
 
+    public static FerryEntity getInstance() {
+        return null;
+    }
+
     @Override
     public String toString() {
         return "FerryEntity{" +
                 "payload=" + payload +
                 ", areaOfPlatform=" + areaOfPlatform +
                 '}';
+    }
+
+    public Set<VehicleEntity> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(Set<VehicleEntity> vehicles) {
+        this.vehicles = vehicles;
     }
 }
