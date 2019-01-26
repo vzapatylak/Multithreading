@@ -1,17 +1,27 @@
 package com.epam.dao;
 
 import com.epam.entity.VehicleEntity;
+import com.epam.reader.JSONReaderVehicle;
+import com.epam.reader.Reader;
+import com.epam.util.Util;
 
-import java.util.Set;
+import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 
 public class VehicleDaoImpl implements VehicleDao {
-    @Override
-    public Set<VehicleEntity> getAll() {
-        return null;
+    private Reader<VehicleEntity> reader;
+    private Path path;
+
+    public VehicleDaoImpl() throws URISyntaxException {
+        reader = new JSONReaderVehicle();
+        path = Paths.get(this.getClass().getClassLoader().getResource(Util.NAME_OF_VEHICLE_FILE).toURI());
     }
 
     @Override
-    public VehicleEntity getById(Long id) {
-        return null;
+    public List<VehicleEntity> getAll() {
+        return reader.parse(path);
     }
+
 }

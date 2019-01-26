@@ -2,11 +2,9 @@ package com.epam.dao;
 
 import com.epam.entity.VehicleEntity;
 
-import java.util.Set;
+import java.util.List;
 
 public interface VehicleDao {
 
-    Set<VehicleEntity> getAll();
-
-    VehicleEntity getById(Long id);
+    List<VehicleEntity> getAll();
 }
