@@ -1,12 +1,21 @@
 package com.epam.entity;
 
-import java.util.Objects;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class VehicleEntity {
-    private long id;
+import java.io.Serializable;
+import java.util.Objects;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+public class VehicleEntity extends BaseEntity implements Serializable, Runnable {
     private int weight;
     private double area;
     private TypeOfCar type;
+    private CyclicBarrier barrier;
+    private static final Logger LOGGER = LogManager.getLogger(FerryEntity.class);
 
     public int getWeight() {
         return weight;
@@ -32,13 +41,14 @@ public class VehicleEntity {
         this.type = type;
     }
 
-    public long getId() {
-        return id;
+    public CyclicBarrier getBarrier() {
+        return barrier;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setBarrier(CyclicBarrier barrier) {
+        this.barrier = barrier;
     }
+
     public VehicleEntity() {
     }
 
@@ -46,6 +56,24 @@ public class VehicleEntity {
         this.weight = weight;
         this.area = area;
         this.type = type;
+    }
+
+    public VehicleEntity(long id, int weight, double area, TypeOfCar type) {
+        this.setId(id);
+        this.weight = weight;
+        this.area = area;
+        this.type = type;
+    }
+
+    @Override
+    public void run() {
+        try {
+            LOGGER.info("The " + getId() + " vehicle entered the platform completely.");
+            barrier.await(2, TimeUnit.SECONDS);
+            LOGGER.info("The " + getId() + " vehicle left the platform.");
+        } catch (InterruptedException | BrokenBarrierException | TimeoutException e) {
+            LOGGER.error(e);
+        }
     }
 
     @Override

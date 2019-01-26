@@ -1,4 +1,4 @@
-package com.epam.entity;/*created*/
+package com.epam.entity;
 
 public enum  State {
     ARRIVED, DEPARTED
