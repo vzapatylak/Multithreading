@@ -2,11 +2,9 @@ package com.epam.service;
 
 import com.epam.entity.VehicleEntity;
 
-import java.util.Set;
+import java.util.List;
 
 public interface VehicleService {
 
-    VehicleEntity getById(Long id);
-
-    Set<VehicleEntity> getAll();
+    List<VehicleEntity> getAll();
 }

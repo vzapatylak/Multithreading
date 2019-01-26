@@ -9,22 +9,8 @@ public class FerryServiceImpl implements FerryService {
 
     private FerryService ferryService;
 
-    private boolean isFull() {
-        return false;
-    }
-
-    public void addAutomobile(VehicleEntity vehicleEntity) {
-    }
-
-    public void removeAutomobile(VehicleEntity vehicleEntity) {
-    }
-
-    private boolean isAreaAllowToAdd(VehicleEntity vehicleEntity) {
-        return false;
-    }
-
-    private boolean isPayloadAllowToAdd(VehicleEntity vehicleEntity) {
-        return false;
+    public FerryServiceImpl() {
+        ferryService = new FerryServiceImpl();
     }
 
     @Override
@@ -34,6 +20,16 @@ public class FerryServiceImpl implements FerryService {
 
     @Override
     public void addVehicle(VehicleEntity vehicle) {
+        ferryService.addVehicle(vehicle);
+    }
 
+    @Override
+    public double sizeOfFilledArea() {
+        return ferryService.sizeOfFilledArea();
+    }
+
+    @Override
+    public int sizeOfFilledPayload() {
+        return ferryService.sizeOfFilledPayload();
     }
 }

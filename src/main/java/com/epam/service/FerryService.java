@@ -10,4 +10,8 @@ public interface FerryService {
     Set<VehicleEntity> getVehicles(FerryEntity ferry);
 
     void addVehicle(VehicleEntity vehicle);
+
+    double sizeOfFilledArea();
+
+    int sizeOfFilledPayload();
 }
