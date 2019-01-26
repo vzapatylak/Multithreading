@@ -10,10 +10,6 @@ import java.util.List;
 public class VehicleServiceImpl implements VehicleService {
     private VehicleDao vehicleDao;
 
-    public VehicleServiceImpl() throws URISyntaxException {
-        vehicleDao = new VehicleDaoImpl();
-    }
-
     @Override
     public List<VehicleEntity> getAll() {
         return vehicleDao.getAll();

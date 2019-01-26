@@ -9,10 +9,6 @@ public class FerryServiceImpl implements FerryService {
 
     private FerryService ferryService;
 
-    public FerryServiceImpl() {
-        ferryService = new FerryServiceImpl();
-    }
-
     @Override
     public Set<VehicleEntity> getVehicles(FerryEntity ferry) {
         return ferryService.getVehicles(ferry);
